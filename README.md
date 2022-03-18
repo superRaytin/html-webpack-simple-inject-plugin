@@ -9,6 +9,8 @@ npm install --save-dev html-webpack-simple-inject-plugin
 
 ## Example
 
+#### input
+
 ```js
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import HtmlWebpackSimpleInjectPlugin from "html-webpack-simple-inject-plugin"
@@ -16,15 +18,21 @@ import HtmlWebpackSimpleInjectPlugin from "html-webpack-simple-inject-plugin"
 export default {
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: "<html><head></head><body></body></html>"
+      templateContent: "<html><head></head><body>text</body></html>"
     }),
     new HtmlWebpackSimpleInjectPlugin({
-      content: '<noscript>You need to enable JavaScript to run this app.</noscript>',
+      content: '<div>inject</div>',
       target: 'body',
       position: 'start',
     }),
   ],
 }
+```
+
+#### output
+
+```html
+<html><head></head><body><div>inject</div>text</body></html>
 ```
 
 ## Options
