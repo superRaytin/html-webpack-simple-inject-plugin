@@ -1,6 +1,13 @@
 # html-webpack-simple-inject-plugin
 Simplely injects a custom string into the html-webpack-plugin output.
 
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
+
+[npm-url]: https://npmjs.org/package/html-webpack-simple-inject-plugin
+[downloads-image]: http://img.shields.io/npm/dm/html-webpack-simple-inject-plugin.svg
+[npm-image]: http://img.shields.io/npm/v/html-webpack-simple-inject-plugin.svg
+
 ## Installation
 
 ```bash
