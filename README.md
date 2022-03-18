@@ -18,7 +18,7 @@ import HtmlWebpackSimpleInjectPlugin from "html-webpack-simple-inject-plugin"
 export default {
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: "<html><head></head><body>text</body></html>"
+      templateContent: '<html><head></head><body>text</body></html>'
     }),
     new HtmlWebpackSimpleInjectPlugin({
       content: '<div>inject</div>',
