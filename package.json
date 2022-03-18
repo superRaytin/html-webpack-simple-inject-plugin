@@ -1,0 +1,33 @@
+{
+  "name": "html-webpack-simple-inject-plugin",
+  "version": "0.1.0",
+  "description": "Simplely injects a custom string into the html-webpack-plugin output",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superRaytin/html-webpack-simple-inject-plugin"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --fix --ext .js src",
+    "prepublishOnly": "npm run lint",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags"
+  },
+  "keywords": [
+    "html-webpack-simple-inject-plugin",
+    "html-webpack-plugin",
+    "html-webpack-injector-head",
+    "html-webpack-injector-body",
+    "html-webpack-inject-string",
+    "webpack-plugins"
+  ],
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "*"
+  }
+}
